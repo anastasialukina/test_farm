@@ -38,6 +38,9 @@ class Farm
         }
     }
 
+    /*
+     * Count of animals each type to get info about them
+     */
     public function countOfAnimals(): array
     {
         $counts = [];

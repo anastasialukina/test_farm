@@ -10,7 +10,7 @@ $unclesFarm = new Farm();
 * Print info about animals in general
 */
 $info = new FarmInfo();
-echo 'В хлеву живут 10 коров и 20 кур: '. PHP_EOL;
+echo 'В хлеву живут 10 коров и 20 кур: ' . PHP_EOL;
 $unclesFarm->createAnimals([
     'Cow' => 10,
     'Hen' => 20,
@@ -23,7 +23,7 @@ for ($i = $weekBeginning; $i < $weekend; $i++) {
     $unclesFarm->collectProducts();
 }
 $info->printCollection($unclesFarm);
-echo 'Купили новых кур и корову на рынке, получилось: '. PHP_EOL;
+echo 'Купили новых кур и корову на рынке, получилось: ' . PHP_EOL;
 $unclesFarm->createAnimals([
     'Cow' => 1,
     'Hen' => 5,
