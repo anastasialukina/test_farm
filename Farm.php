@@ -38,7 +38,7 @@ class Farm
         }
     }*/
 
-    public function addAnimals(Animal $animal){
+    public function addAnimal(Animal $animal){
         $animal->setUid();
         $name = $animal->getName();
         $this->animalsGroup[$name][] = new $animal;
@@ -64,7 +64,7 @@ class Farm
             foreach ($value as $animal) {
                 $product += $animal->getFarmProducts();
             }
-            $this->productsCollection["$key"] = $product;
+            $this->productsCollection[$key] = $product;
         }
     }
 

@@ -24,10 +24,12 @@ for ($i = $weekBeginning; $i <= $weekend; $i++) {
 }
 $info->printCollection($unclesFarm);
 echo 'Купили новых кур и корову на рынке, получилось: ' . PHP_EOL;
-$unclesFarm->createAnimals([
-    'Cow' => 1,
-    'Hen' => 5,
-]);
+$countOfHens = 20;
+$countOfCows = 10;
+for ($i = 0; $i<= $countOfHens; $i++){
+
+}
+$unclesFarm->addAnimal($animal);
 $info->printAnimals($unclesFarm);
 
 for ($i = $weekBeginning; $i < $weekend; $i++) {
