@@ -1,5 +1,7 @@
 <?php
 
+namespace App;
+
 class FarmInfo extends Farm
 {
     /*

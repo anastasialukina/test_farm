@@ -1,16 +1,20 @@
 <?php
 
-class Hen extends Animal
+namespace App;
+
+use Exception;
+
+class Cow extends Animal
 {
     /**
      * @var int Min quantity of production
      */
-    private const MIN_QUANTITY_PRODUCTION = 0;
+    private const MIN_QUANTITY_PRODUCTION = 8;
 
     /**
      * @var int Max quantity of production
      */
-    private const MAX_QUANTITY_PRODUCTION = 1;
+    private const MAX_QUANTITY_PRODUCTION = 12;
 
 
     /**
@@ -25,6 +29,6 @@ class Hen extends Animal
 
     public function getName(): string
     {
-        return 'Hen';
+        return 'Cow';
     }
 }

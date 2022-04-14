@@ -2,3 +2,4 @@
 /public/storage
 /.idea
 .env
+/vendor

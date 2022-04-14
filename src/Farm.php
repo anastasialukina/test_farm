@@ -1,47 +1,25 @@
 <?php
 
+namespace App;
+
 class Farm
 {
     /*
 	*@array Group of animals
 	*/
-    /*
-        $animalsGroup = [
-            'Cow' => [
-                new Cow,
-                new Cow,
-                //...
-            ],
-            'Hen' => [
-                new Hen,
-                new Hen,
-                new Hen,
-                //...
-            ],
-        ];
-     */
-    public array $animalsGroup = [];
 
+    public array $animalsGroup = [];
 
     /*
 	*@array Array of products
 	*/
     public array $productsCollection = [];
 
-    /*public function createAnimals(array $animals): void
+
+    public function addAnimal(Animal $animal)
     {
-        foreach ($animals as $animalType => $animalCount) {
-
-            for ($i = 1; $i <= $animalCount; $i++) {
-                $this->animalsGroup["$animalType"][] = new $animalType();
-            }
-        }
-    }*/
-
-    public function addAnimal(Animal $animal){
-        $animal->setUid();
         $name = $animal->getName();
-        $this->animalsGroup[$name][] = new $animal;
+        $this->animalsGroup[$name][] = $animal;
     }
 
     /*
