@@ -38,6 +38,11 @@ class Farm
         }
     }
 
+    public function addAnimals(Animal $animal){
+        $animal->setUid();
+
+    }
+
     /*
      * Count of animals each type to get info about them
      */

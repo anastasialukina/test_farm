@@ -19,7 +19,7 @@ $info->printAnimals($unclesFarm);
 
 $weekBeginning = 1;
 $weekend = 7;
-for ($i = $weekBeginning; $i < $weekend; $i++) {
+for ($i = $weekBeginning; $i <= $weekend; $i++) {
     $unclesFarm->collectProducts();
 }
 $info->printCollection($unclesFarm);

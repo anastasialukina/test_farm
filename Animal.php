@@ -12,7 +12,7 @@ abstract class Animal
     /*
     * Add unique id to each animal in farm
     */
-    public function setUid($uid): void
+    public function setUid(): void
     {
         $this->uid = uniqid();
     }
