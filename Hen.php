@@ -22,4 +22,9 @@ class Hen extends Animal
     {
         return random_int(self::MIN_QUANTITY_PRODUCTION, self::MAX_QUANTITY_PRODUCTION);
     }
+
+    public function getName(): string
+    {
+        return 'Hen';
+    }
 }

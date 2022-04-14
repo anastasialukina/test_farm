@@ -28,7 +28,7 @@ class Farm
 	*/
     public array $productsCollection = [];
 
-    public function createAnimals(array $animals): void
+    /*public function createAnimals(array $animals): void
     {
         foreach ($animals as $animalType => $animalCount) {
 
@@ -36,11 +36,12 @@ class Farm
                 $this->animalsGroup["$animalType"][] = new $animalType();
             }
         }
-    }
+    }*/
 
     public function addAnimals(Animal $animal){
         $animal->setUid();
-
+        $name = $animal->getName();
+        $this->animalsGroup[$name][] = new $animal;
     }
 
     /*
@@ -49,8 +50,8 @@ class Farm
     public function countOfAnimals(): array
     {
         $counts = [];
-        foreach ($this->animalsGroup as $animalType => $animals) {
-            $counts[$animalType] = count($animals);
+        foreach ($this->animalsGroup as $name => $animals) {
+            $counts[$name] = count($animals);
         }
 
         return $counts;
@@ -58,11 +59,10 @@ class Farm
 
     public function collectProducts(): void
     {
-        foreach ($this->animalsGroup as $key => $value) { //we get production from each type of animal we need
+        foreach ($this->animalsGroup as $key => $value) {
             $product = 0;
             foreach ($value as $animal) {
-                $product += $animal->getFarmProducts(); //universal abstract function to get farm products
-                // from the specific kind of animal
+                $product += $animal->getFarmProducts();
             }
             $this->productsCollection["$key"] = $product;
         }

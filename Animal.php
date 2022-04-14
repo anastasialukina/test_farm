@@ -18,4 +18,6 @@ abstract class Animal
     }
 
     abstract public function getFarmProducts();
+
+    abstract public function getName();
 }
