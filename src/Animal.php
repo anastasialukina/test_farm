@@ -14,12 +14,12 @@ abstract class Animal
         $this->uid = uniqid();
     }
 
-    public function getUid()
-    {
-        return $this->uid;
-    }
-
     abstract public function getFarmProducts();
 
     abstract public function getName();
+
+    public function getUid(): string
+    {
+        return $this->uid;
+    }
 }

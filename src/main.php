@@ -1,13 +1,14 @@
 <?php
 
+require 'vendor/autoload.php';
+
 use App\Cow;
 use App\Farm;
 use App\FarmInfo;
 use App\Hen;
 
-require 'vendor/autoload.php';
-
 $unclesFarm = new Farm();
+
 /*
 * Print info about animals in general
 */
